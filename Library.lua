@@ -1987,12 +1987,13 @@ function Library:Notify(Text, Time)
     NotifyOuter:TweenSize(UDim2.new(0, MaxSize + 8 + 4, 0, 20), 'Out', 'Quad', 0.4, true);
 
     task.spawn(function()
+        print("P!")
         wait(5 or Time);
-
+        print("tweening")
         NotifyOuter:TweenSize(UDim2.new(0, 0, 0, 20), 'Out', 'Quad', 0.4, true);
 
         wait(0.4);
-
+        print("destroying")
         NotifyOuter:Destroy();
     end);
 end;
